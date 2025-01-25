@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Belden - Get your product identity from me.</title>
+  <meta name="title" content="Belden - Get your product identity from me.">
+  <meta name="description" content="This is a personal portfolio html template made by Belden">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/font/font.css">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-1.png">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+<style>
+  .slider-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  max-width: 90vh; /* Changed to viewport height units */
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.popup-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Added to maintain aspect ratio */
+  display: block;
+  border-radius: 10px;
+}
+
+/* Rest of the styles remain unchanged */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.popup-icon-wrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.popup-icon {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.popup-icon:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+</style>
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <span class="line"></span>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/Belden Logo White no text.png" width="164" height="60" alt="logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/Belden-Low-Logo-white.png" width="104" height="26" alt="logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="/index.html#service" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li>
+            <a href="/index.html#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="/index.html#project" class="navbar-link" data-nav-link>Project</a>
+          </li>
+
+          <li>
+            <a href="/index.html#review" class="navbar-link" data-nav-link>Review</a>
+          </li>
+
+          <li>
+            <a href="/index.html#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn:hover">
+        <span class="span">Get A Quote</span>
+
+        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+      </a>
+
+      <button class="nav-open-btn btn:hover" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+     
+
+
+
+
+     
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #PROJECTS
+      -->
+        <section class="section interview" aria-label="about-me" id="about" style="margin-top: 50px;">
+        <div class="container">
+
+          <div class="tab-container">
+
+            
+
+            
+            <div class="tab-content active" data-tab-content="interview">
+              <div class="grid-list">
+                <div class="interview-card img-holder" style="--width: 376; --height: 420;" >
+                  <video id="video1" width="376" height="420" controls class="img-cover" >
+                    <source src="https://cdn-cf-east.streamable.com/video/mp4/bwtdhy.mp4?Expires=1737894128820&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=OWwDiuA-KAQYIpjnOykbRDDXISvj5DQ07YOO1On4p8cLlu3WHeEuGhWpYjGWLDs-0eiPxvQmuLtCwHVKr5c2Zca7R86Vwv8d88wNosuU10~5o8yCTcl0Lt1~x48UOIstLwaM6sytdxV8g9D5FQ-FsRTkNboGXsK1Y7pS7uCnNjVH2ghpEqLemBsfKO9VC3lcIDaxUaX42dEUcm7Pt2zlC5ivnBrLfqRUSzVh4KaariVnAQYdggd1NIqMpleiHVpgRl0KjzrzAtK8S5tduOr6ft70dM7k5bIZ1I7DvX1oMS8~IdqnYPIubFJe2syO3g2iK0z0urQf1KiefTeS73WyZw__" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <button id="playButton1" class="btn btn:hover">Play</button>
+                </div>
+      
+                <div class="interview-card img-holder" style="--width: 376; --height: 420;" >
+                  <video id="video2" width="376" height="420" controls class="img-cover" >
+                    <source src="https://cdn-cf-east.streamable.com/video/mp4/c1vx8z.mp4?Expires=1737894026776&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=X21TJcjXOtq0pVBpWNUpMv6zgnhXH0eq0sAPF-BzQaIUQbccyP0vE5yivQVcCKqmM55Udz-bpeMh5N8u0xMMxY3X1DqkbRJlOdn2JthFPSQclbjhcZrCpbvdiVPQbWlTEN8CRTJ~mOXgEE85LKHQTPsDR73O70qScRyfrS-t5PgcfW3GMmiVCqB~VSym23~rmb25oT0x52bh4TXOdyJE~o-5gx2AAAhEus3IpL9cPZ7h9IXEFZao0XfiVFzPu93pUPoyIsV6DOW97deMLWb97lIUfGkTaUH7kXo165vaHEoJq5P-N5qN0Dw64pAWGEZKzdCQZjYFOh70jV6ddJLqDQ__" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <button id="playButton2" class="btn btn:hover">Play</button>
+                </div>
+      
+                <div class="interview-card img-holder" style="--width: 376; --height: 420;">
+                  <video id="video3" width="376" height="420" controls class="img-cover" >
+                    <source src="https://cdn-cf-east.streamable.com/video/mp4/2nva10.mp4?Expires=1737894195685&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=UGUbCRrBumZ6izh-wN5S3N9B3oNFIQgjPZvNeNVXPfyhuUebQcn8--LbtXu9pjP~OVsy9TDRGROxQNQo03Zrjl837pgWN5~odMOuEosy2ag6WfrddaYxoK5o0JpGk89GvRyo986EMUmy3KGmS9IXpSc2P-f-Lzq3eZrsQRCjwyJ9X5rkdVyGa2-TseGnepDCnpOvhSZ6zzR9R~TRCr3X9b~YVl~~gXgwBf2WX38g-UB~4~pmTGIfruewFhIH8fugAPt3O5qdlADmMZy8xF~wrJYs9pYQWQGl34cjbtIaUUvfLkOd~d73t-xxRQa2~4oSnpdEvNZhLR-NMXn8n2zZuw__" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <button id="playButton3" class="btn btn:hover">Play</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      
+      
+
+
+
+
+
+      
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact" aria-label="contact me" id="contact">
+        <div class="container">
+
+          <h2 class="title h2 section-title">Get In Touch</h2>
+
+          <div class="contact-content">
+
+            <form action="./index.html" method="post" class="contact-form">
+
+              <input type="text" name="name" placeholder="Full name" autocomplete="off" required class="input-field">
+
+              <input type="email" name="email_address" placeholder="Email address" autocomplete="off" required
+                class="input-field">
+
+              <input type="tel" name="phone" placeholder="Phone" autocomplete="off" class="input-field">
+
+              <textarea name="message" placeholder="Enter massges" required class="input-field"></textarea>
+
+              <button type="submit" class="btn btn:hover">
+                <span class="span">Get A Quote</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </button>
+
+            </form>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.633695897539!2d103.75183324783644!3d1.3815963792644579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11bd17ec9967%3A0xc3369dc85d017b6!2sSingapore%20670603!5e0!3m2!1sen!2sma!4v1737642824587!5m2!1sen!2sma"
+              width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+            <ul class="contact-list">
+
+              <li class="contact-item">
+
+                <div class="item-icon">
+                  <img src="./assets/images/contact-icon-1.png" width="50" height="50" loading="lazy"
+                    alt="contact icon">
+                </div>
+
+                <div>
+                  <span class="title h6"> +65 98897487</span>
+                </div>
+
+              </li>
+
+              <li class="contact-item">
+
+                <div class="item-icon">
+                  <img src="./assets/images/contact-icon-2.png" width="50" height="50" loading="lazy"
+                    alt="contact icon">
+                </div>
+
+                <div>
+                  <address class="title h6">
+                    670603, 670603, Singapore
+                  </address>
+                </div>
+
+              </li>
+
+              <li class="contact-item">
+
+                <div class="item-icon">
+                  <img src="./assets/images/contact-icon-3.png" width="50" height="50" loading="lazy"
+                    alt="contact icon">
+                </div>
+
+                <div>
+                  <span class="title h6">Rasonlow2@gmail.com</span>
+
+                  <span class="title h6"></span>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="copyright">
+        Copyright & Design By @belden - 2025
+      </p>
+
+      <a href="#top" class="back-top-btn">
+        <span class="span">Back To Top</span>
+
+        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+      </a>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #CUSTOM CURSOR
+  -->
+
+  <div class="cursor-dot" data-cursor></div>
+  <div class="cursor-outline" data-cursor></div>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script> // Get all video elements and play buttons
+    document.addEventListener("DOMContentLoaded", function () {
+     const playButton1 = document.getElementById("playButton1");
+     const playButton2 = document.getElementById("playButton2");
+     const playButton3 = document.getElementById("playButton3");
+     const video1 = document.getElementById("video1");
+     const video2 = document.getElementById("video2");
+     const video3 = document.getElementById("video3");
+   
+     // Play video and hide play button
+     // VIDEO 1
+     playButton1.addEventListener("click", function () {
+       video1.play();
+       playButton1.classList.add("hidden"); // Hide play button
+     });
+   
+     // Show play button when the video is paused or ended
+     video1.addEventListener("pause", function () {
+       playButton1.classList.remove("hidden"); // Show play button
+     });
+   
+     video1.addEventListener("ended", function () {
+       playButton1.classList.remove("hidden"); // Show play button
+     });
+   
+   
+     // VIDEO 2
+     // Play video and hide play button
+     playButton2.addEventListener("click", function () {
+       video2.play();
+       playButton2.classList.add("hidden"); // Hide play button
+     });
+   
+     // Show play button when the video is paused or ended
+     video2.addEventListener("pause", function () {
+       playButton2.classList.remove("hidden"); // Show play button
+     });
+   
+     video2.addEventListener("ended", function () {
+       playButton2.classList.remove("hidden"); // Show play button
+     });
+   
+     // VIDEO3
+     // Play video and hide play button
+     playButton3.addEventListener("click", function () {
+       video3.play();
+       playButton3.classList.add("hidden"); // Hide play button
+     });
+   
+     // Show play button when the video is paused or ended
+     video3.addEventListener("pause", function () {
+       playButton3.classList.remove("hidden"); // Show play button
+     });
+   
+     video3.addEventListener("ended", function () {
+       playButton3.classList.remove("hidden"); // Show play button
+     });
+   });
+   
+  // Get all popup triggers and the popup elements
+  const popupTriggers = document.querySelectorAll(".popup-trigger, .popup-icon");
+  const popupOverlay = document.getElementById("image-popup");
+  const popupImage = document.getElementById("popup-img");
+  const closePopupBtn = document.getElementById("close-popup");
+  
+  // Add click event listeners to each image and icon
+  popupTriggers.forEach(trigger => {
+    trigger.addEventListener("click", function () {
+      // Get the associated image source
+      const imgSrc = this.tagName === "SPAN" 
+        ? this.previousElementSibling.getAttribute("src") 
+        : this.getAttribute("src");
+  
+      // Set the popup image source and display the popup
+      popupImage.setAttribute("src", imgSrc);
+      popupOverlay.style.display = "flex";
+    });
+  });
+  
+  // Close the popup when the close button is clicked
+  closePopupBtn.addEventListener("click", () => {
+    popupOverlay.style.display = "none";
+  });
+  
+  // Close the popup when clicking outside the image
+  popupOverlay.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) {
+      popupOverlay.style.display = "none";
+    }
+  });
+   
+   </script>
+
+</body>
+
+</html>
