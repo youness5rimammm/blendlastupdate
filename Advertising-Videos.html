@@ -251,7 +251,7 @@
             <div class="tab-content active" data-tab-content="interview">
               <div class="grid-list">
                 <div class="interview-card img-holder" style="--width: 376; --height: 420;" >
-                  <video id="video1" width="376" height="420" controls class="img-cover video" >
+                  <video id="video1" width="376" height="420" controls class="img-coverr video" >
                     <source src="https://cdn-cf-east.streamable.com/video/mp4/bwtdhy.mp4?Expires=1737894128820&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=OWwDiuA-KAQYIpjnOykbRDDXISvj5DQ07YOO1On4p8cLlu3WHeEuGhWpYjGWLDs-0eiPxvQmuLtCwHVKr5c2Zca7R86Vwv8d88wNosuU10~5o8yCTcl0Lt1~x48UOIstLwaM6sytdxV8g9D5FQ-FsRTkNboGXsK1Y7pS7uCnNjVH2ghpEqLemBsfKO9VC3lcIDaxUaX42dEUcm7Pt2zlC5ivnBrLfqRUSzVh4KaariVnAQYdggd1NIqMpleiHVpgRl0KjzrzAtK8S5tduOr6ft70dM7k5bIZ1I7DvX1oMS8~IdqnYPIubFJe2syO3g2iK0z0urQf1KiefTeS73WyZw__" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
@@ -259,7 +259,7 @@
                 </div>
       
                 <div class="interview-card img-holder" style="--width: 376; --height: 420;" >
-                  <video id="video2" width="376" height="420" controls class="img-cover video" >
+                  <video id="video2" width="376" height="420" controls class="img-coverr video" >
                     <source src="https://cdn-cf-east.streamable.com/video/mp4/c1vx8z.mp4?Expires=1737894026776&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=X21TJcjXOtq0pVBpWNUpMv6zgnhXH0eq0sAPF-BzQaIUQbccyP0vE5yivQVcCKqmM55Udz-bpeMh5N8u0xMMxY3X1DqkbRJlOdn2JthFPSQclbjhcZrCpbvdiVPQbWlTEN8CRTJ~mOXgEE85LKHQTPsDR73O70qScRyfrS-t5PgcfW3GMmiVCqB~VSym23~rmb25oT0x52bh4TXOdyJE~o-5gx2AAAhEus3IpL9cPZ7h9IXEFZao0XfiVFzPu93pUPoyIsV6DOW97deMLWb97lIUfGkTaUH7kXo165vaHEoJq5P-N5qN0Dw64pAWGEZKzdCQZjYFOh70jV6ddJLqDQ__" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
@@ -267,7 +267,7 @@
                 </div>
       
                 <div class="interview-card img-holder" style="--width: 376; --height: 420;">
-                  <video id="video3" width="376" height="420" controls class="img-cover video" >
+                  <video id="video3" width="376" height="420" controls class="img-coverr video" >
                     <source src="https://cdn-cf-east.streamable.com/video/mp4/2nva10.mp4?Expires=1737894195685&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=UGUbCRrBumZ6izh-wN5S3N9B3oNFIQgjPZvNeNVXPfyhuUebQcn8--LbtXu9pjP~OVsy9TDRGROxQNQo03Zrjl837pgWN5~odMOuEosy2ag6WfrddaYxoK5o0JpGk89GvRyo986EMUmy3KGmS9IXpSc2P-f-Lzq3eZrsQRCjwyJ9X5rkdVyGa2-TseGnepDCnpOvhSZ6zzR9R~TRCr3X9b~YVl~~gXgwBf2WX38g-UB~4~pmTGIfruewFhIH8fugAPt3O5qdlADmMZy8xF~wrJYs9pYQWQGl34cjbtIaUUvfLkOd~d73t-xxRQa2~4oSnpdEvNZhLR-NMXn8n2zZuw__" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
@@ -525,29 +525,7 @@
   });
    
    </script>
-   <script>
-     const videos = document.querySelectorAll('.video');
-
-videos.forEach((video) => {
-  // Listen for fullscreenchange event
-  video.addEventListener('fullscreenchange', () => {
-    if (document.fullscreenElement === video) {
-      // Apply styles for fullscreen
-      video.classList.remove ('fullscreen-style');
-    } else {
-      // Remove styles when exiting fullscreen
-      video.classList.add('fullscreen-style');
-    }
-  });
-
-  // Ensure the event also triggers when fullscreen is requested
-  video.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-      video.requestFullscreen();
-    }
-  });
-});
-   </script>
+   
 
 </body>
 
